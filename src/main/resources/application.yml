@@ -1,0 +1,23 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1
+
+exchange:
+  api:
+    provider: RATES
+    url: https://api.ratesapi.io/api
+    access_key: 7a2319c27f065a8387051089c1b79848
+
+---
+spring:
+  config:
+    activate:
+      on-profile: debug
+
+debug: true
+
+logging:
+  level:
+    ROOT: debug
+    org.apache.catalina: info
